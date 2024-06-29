@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>ver docene</h1>
+    <h1>ver docente</h1>
 
    
         <div class="row">
@@ -21,21 +21,12 @@
                 <input type="text" name="email" id="email" class="form-control" value="{{$docente->email}}" disabled>
             </div>
         </div>
-
+        <br>
         <div class="row">
             <div class="col-md-12">
-               <button class="btn btn-primary" type="submit">eliminar</button>
                <a href="{{route('docentes.index')}}" class="btn btn-secondary">retornar</a>
             </div>
         </div>
-        <br>
-
-        <div class="row">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">crear</button>
-                <a href="{{route('docentes.index')}}" class="bt btn-primary">cancelar</a>
-            </div>
-        </div>
-   
+        
     
 @endsection

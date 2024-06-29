@@ -46,17 +46,17 @@
                 <tr>
                     <td>{{$docente->nombre}}</td>
                     <td>{{$docente->apellido}}</td>
-                    <td>{{$docente->}} -> emial</td>
+                    <td>{{$docente->email}}</td>
                     <td>
                         <table>
                             <td>
-                                <a href="{{route('docentes.edit', $docentes->id)}}" class="btn btn-warning">editar</a>
+                                <a href="{{route('docentes.edit', $docente->id)}}" class="btn btn-warning">editar</a>
                             </td>
                             <td>
-                                <a href="{{route('docentes.show', $docentes->id)}}" class="btn btn-info">ver</a>
+                                <a href="{{route('docentes.show', $docente->id)}}" class="btn btn-info">ver</a>
                             </td>
                             <td>
-                                <a href="{{route('docentes.delete', $docentes->id)}}" class="btn btn-danger">eliminar</a>
+                                <a href="{{route('docentes.delete', $docente->id)}}" class="btn btn-danger">eliminar</a>
 
                             </td>
                         </table>
@@ -68,7 +68,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            {{$docentes->links}}
+            {{$docente->links}}
         </div>
     </div>
 

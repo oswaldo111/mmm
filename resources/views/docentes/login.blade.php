@@ -4,7 +4,7 @@
 
     <h1>login docente</h1>
 
-    <form action="{{docentes.login}}" method="POST">
+    <form action="{{ route('docentes.login')}}" method="POST">
         @csrf
 
         <div class="row">
@@ -28,8 +28,8 @@
 
         <div style="margin-top: 10px" class="row">
             @error('InvalidCredentials')
-            <div class="alert alert-danger fade show" id="success-messege" data-bs-dismiss="alert" role="alert">
-                {{$messege}}
+            <div class="alert alert-danger fade show" id="success-message" data-bs-dismiss="alert" role="alert">
+                {{$message}}
             </div>
                 
             @enderror

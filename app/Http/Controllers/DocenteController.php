@@ -98,6 +98,16 @@ class DocenteController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
+     public function delete($id){
+        $docente =Docente::find($id);
+
+        if (!$docente) {
+            return abort(404);
+        }
+        return view('docentes.delete', compact('docente'));
+     }
+
     public function destroy($id)
     {
         $docente = Docente::find($id);

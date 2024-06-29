@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>eliminar docene</h1>
+    <h1>eliminar docente</h1>
 
     <form action="{{route('docentes.destroy', $docente->id)}}" method="POST">
         @csrf
@@ -31,12 +31,7 @@
         </div>
         <br>
 
-        <div class="row">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">crear</button>
-                <a href="{{route('docentes.index')}}" class="bt btn-primary">cancelar</a>
-            </div>
-        </div>
+        
     </form>
     
 @endsection

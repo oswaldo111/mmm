@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>editar docene</h1>
+    <h1>editar docente</h1>
 
     <form action="{{route('docentes.update', $docente->id)}}" method="POST">
         @csrf
@@ -22,21 +22,14 @@
                 <input type="text" name="email" id="email" class="form-control" value="{{$docente->email}}" required>
             </div>
         </div>
-
+        <br>
         <div class="row">
             <div class="col-md-12">
                <button class="btn btn-primary" type="submit">modificar</button>
                <a href="{{route('docentes.index')}}" class="btn btn-secondary">cancelar</a>
             </div>
         </div>
-        <br>
-
-        <div class="row">
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">crear</button>
-                <a href="{{route('docentes.index')}}" class="bt btn-primary">cancelar</a>
-            </div>
-        </div>
+        
     </form>
     
 @endsection
