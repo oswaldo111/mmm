@@ -13,7 +13,7 @@
     <body>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="#!">Start Bootstrap</a>
+            <a class="navbar-brand ps-3" href="{{route('home')}}">esfe</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
                 <i class="fas fa-bars"></i>
@@ -30,10 +30,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                       @if (auth()->check())
+                       <li><a class="dropdown-item" href="{{route('docentes.logout')}}">logout</a></li>
+                           
+                       @else
+                         <li><a href="{{route('docentes.showLoginForm')}}" class="dropdown-item">iniciar sesion</a></li>
+                       @endif
                     </ul>
                 </li>
             </ul>
@@ -43,8 +45,11 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
+
+                            @if (auth()->check())
+                                
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="#!">
+                            <a class="nav-link" href="{{route('docentes.index')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 docentes
                             </a>
@@ -56,7 +61,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 docentes grupos
                             </a>
-                        </div> 
+                          </div> 
+                            @endif
+
+
                       </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
