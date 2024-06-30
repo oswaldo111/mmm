@@ -1,12 +1,8 @@
 @extends('layouts.app')
-
 @section('content')
-
     <h1>login docente</h1>
-
     <form action="{{ route('docentes.login')}}" method="POST">
         @csrf
-
         <div class="row">
             <div class="col-md-6">
                 <label for="email" class="form-label">email</label>
@@ -16,7 +12,7 @@
         <div class="row">
             <div class="col-md-4">
                 <label for="password" class="form-label">password</label>
-                <input type="text" name="password" id="password" class="form-control" required>
+                <input type="password" name="password" id="password" class="form-control" required>
             </div>
         </div>
 
@@ -35,5 +31,4 @@
             @enderror
         </div>
     </form>
-    
 @endsection

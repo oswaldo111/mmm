@@ -29,9 +29,6 @@
                <a href="{{route('docentes.index')}}" class="btn btn-secondary">cancelar</a>
             </div>
         </div>
-        <br>
-
-        
+        <br>     
     </form>
-    
 @endsection

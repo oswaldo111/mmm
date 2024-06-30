@@ -1,7 +1,5 @@
 @extends('layouts.app')
-
 @section('content')
-
     <h1>editar docente</h1>
 
     <form action="{{route('docentes.update', $docente->id)}}" method="POST">
